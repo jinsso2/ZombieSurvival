@@ -17,6 +17,7 @@ public class PlayerInput : MonoBehaviour {
     // 매프레임 사용자 입력을 감지
     private void Update() {
         // 게임오버 상태에서는 사용자 입력을 감지하지 않는다
+        // 게임 매니저가 씬에 존재하고, 게임오버 상태일 때 초기화 후 Update() 종료
         if (GameManager.instance != null && GameManager.instance.isGameover)
         {
             move = 0;

@@ -7,6 +7,9 @@ public class LivingEntity : MonoBehaviour, IDamageable {
     public float startingHealth = 100f; // 시작 체력
     public float health { get; protected set; } // 현재 체력
     public bool dead { get; protected set; } // 사망 상태
+    
+    // Action 타입은 입력과 출력이 없는 '메서드'를 가리킬 수 있는 델리게이트
+    // 메서드를 값으로 할당받을 수 있는 타입
     public event Action onDeath; // 사망시 발동할 이벤트
 
     // 생명체가 활성화될때 상태를 리셋
